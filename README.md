@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+#NXLog React Test Tasks
+This repository contains two React components, a "Transfer List" and a "Password Generator", that were created as part of a challenge. Both components were implemented using React hooks and functional components and were built using React Create App and styled using SASS/SCSS. The challenge took approximately 7 hours to complete, with 2 hours for building the "Transfer List" component and 1 hour for writing tests, and 2 hours for building the "Password Generator" component and 1 hour for writing tests.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##Transfer List
+The "Transfer List" component allows users to transfer items between two columns, each containing different items and pagination with controls. It has buttons to transfer selected items or all items between columns and the buttons behavior is based on the selected items and the items present in the columns.
 
-## Available Scripts
+###Usage
+```
+function App() {
+  const [list, setList] = useState(data);
 
-In the project directory, you can run:
+  return (
+    <TransferList list={list} onChange={setList} />
+  );
+}
+```
 
-### `npm start`
+##Password Generator
+The "Password Generator" component allows users to generate a password with a certain character length based on selected options such as including lowercase, uppercase, numbers, and symbols. It includes a copy button to copy the generated password to the clipboard.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+###Usage
+```
+function App() {
+  return (
+    <PasswordGenerator />
+  );
+}
+```
+Please note that the data and onChange props are not mentioned in the usage of the password generator component because the task has not provided any information about the props of the component.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+##Conclusion
+This challenge was a good way to practice creating custom react components and using React hooks, and also a good practice to implement the best practices in creating a react application such as creating functional components and using React Create App.
